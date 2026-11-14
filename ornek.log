@@ -1,0 +1,8 @@
+2026-11-14 09:58:12 [INFO] uygulama başladı
+2026-11-14 09:58:15 [INFO] veritabanına bağlanıldı
+2026-11-14 10:02:40 [WARNING] yanıt süresi yüksek
+2026-11-14 10:03:01 [ERROR] bağlantı koptu
+2026-11-14 10:03:05 [INFO] yeniden bağlanılıyor
+2026-11-14 10:03:09 [ERROR] bağlantı koptu
+2026-11-14 10:15:22 [ERROR] disk alanı yetersiz
+2026-11-14 10:20:00 [INFO] günlük rapor oluşturuldu
