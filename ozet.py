@@ -1,4 +1,5 @@
 import re
+from collections import Counter
 
 # Beklenen biçim: 2026-11-14 10:00:01 [ERROR] mesaj
 SATIR = re.compile(r"^(\S+ \S+) \[(\w+)\] (.*)$")
@@ -21,3 +22,10 @@ def seviye_sayilari(kayitlar):
     for kayit in kayitlar:
         sonuc[kayit["seviye"]] = sonuc.get(kayit["seviye"], 0) + 1
     return sonuc
+
+
+
+def en_sik_hatalar(kayitlar, n=3):
+    """En sık tekrarlanan ERROR mesajlarını ve kaç kez geçtiklerini döndürür."""
+    hatalar = Counter(k["mesaj"] for k in kayitlar if k["seviye"] == "ERROR")
+    return hatalar.most_common(n)
